@@ -133,6 +133,7 @@ if (isset($_POST['simpan'])) {
                                                 <option value="A0127">A0127</option>
                                                 <option value="A0313">A0313</option>
                                                 <option value="A0401">A0401</option>
+                                                <option value="A0404">A0404</option>
                                                 <option value="A0406">A0406</option>
                                                 <option value="A0407">A0407</option>
                                                 <option value="A0408">A0408</option>
@@ -170,6 +171,7 @@ if (isset($_POST['simpan'])) {
                                                 <option value="LAB HM Front Office">LAB HM Front Office</option>
                                                 <option value="LAB HM Restaurant">LAB HM Restaurant</option>
                                                 <option value="LAB HM Housekeeping">LAB HM Housekeeping</option>
+                                                <option value="Incubator">Incubator</option>
                                                 <option value="Reguler Class Hybrid">Reguler Class Hybrid</option>
                                                 <option value="LAB HM resto Standing TV">LAB HM resto Standing TV</option>
                                                 <option value="Reguler Class">Reguler Class</option>
@@ -183,6 +185,7 @@ if (isset($_POST['simpan'])) {
                                             <label for="inputaccountoffice" class="form-label">Account Office</label>
                                             <select class="form-control" id="inputaccountoffice" name="accountoffice" required>
                                                 <option value="" selected hidden>-- Pilih Account Office --</option>
+                                                <option value="Tidak Ada">Tidak Ada</option>
                                                 <option value="bmca001@binus.edu">bmca001@binus.edu</option>
                                                 <option value="bmca002@binus.edu">bmca002@binus.edu</option>
                                                 <option value="bmca003@binus.edu">bmca003@binus.edu</option>
@@ -260,6 +263,8 @@ if (isset($_POST['simpan'])) {
                                             <label for="inputtipemonitor" class="form-label">Tipe Monitor</label>
                                             <select class="form-control" name="tipemonitor" required>
                                                 <option value="" selected hidden>-- Pilih Tipe Monitor --</option>
+                                                <option value="HP V220">HP V220</option>
+                                                <option value="Konzerto">Konzerto</option>
                                                 <option value="Hp V194">Hp V194</option>
                                                 <option value="Hp V193b">Hp V193b</option>
                                                 <option value="HP V194 18.5-inch Monitor">HP V194 18.5-inch Monitor</option>
