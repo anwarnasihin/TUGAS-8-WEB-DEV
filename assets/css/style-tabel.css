@@ -1,0 +1,101 @@
+/* Container tabel agar bisa di-scroll horizontal */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Mengatur baris agar teks tidak pecah ke bawah (wrap) */
+#dataTable th, 
+#dataTable td {
+    white-space: nowrap;
+    vertical-align: middle;
+    padding: 12px 8px;
+}
+
+/* Mengatur lebar spesifik menggunakan selector kolom */
+/* Kolom No/ID */
+#dataTable th:nth-child(1), 
+#dataTable td:nth-child(1) {
+    min-width: 50px;
+    text-align: center;
+}
+
+/* Kolom Ruangan */
+#dataTable th:nth-child(2), 
+#dataTable td:nth-child(2) {
+    min-width: 180px;
+}
+
+/* Kolom Spesifikasi (Dibuat paling lebar) */
+#dataTable th:nth-child(8), 
+#dataTable td:nth-child(8) {
+    min-width: 350px;
+}
+
+/* Kolom IP & Mac Address */
+#dataTable th:nth-child(9), 
+#dataTable th:nth-child(10) {
+    min-width: 150px;
+}
+
+/* Kolom Aksi agar tetap terlihat rapi di ujung kanan */
+#dataTable th:last-child, 
+#dataTable td:last-child {
+    min-width: 120px;
+    text-align: center;
+}
+
+#dataTable th {
+    background-color: #FEFFD3; /* Warna biru khas SB Admin 2 */
+    color: #355872;            /* Warna teks putih agar kontras */
+    text-align: center;
+    /* text-transform: uppercase; Membuat teks jadi huruf besar semua agar tegas */
+    font-size: 14px;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 1px solid #ECECEC !important; /* Memberi garis pembatas antar header */
+}
+
+/* Opsional: Memberi warna yang sedikit berbeda saat baris di-hover */
+#dataTable tbody tr:hover {
+    background-color: #f8f9fc;
+}
+
+/* Mengatur semua isi sel tabel (td) */
+#dataTable td {
+      text-transform: none !important; /*Semua menjadi huruf kecil  */
+    /* text-transform: uppercase;  <- Jika ingin huruf besar semua */
+    /* text-transform: capitalize; <- Jika ingin huruf besar di awal kata saja */
+    
+    font-size: 13px; /* Ukuran font yang pas untuk data aset */
+    /* color: #5a5c69;  Warna teks abu-abu gelap agar tidak terlalu tajam */
+}
+
+/* Khusus untuk kolom tertentu yang butuh huruf besar (misal: ID atau SN) */
+#dataTable td:nth-child(1), /* Kolom ID */
+#dataTable td:nth-child(6) { /* Kolom SN PC */
+    /* text-transform: uppercase;  */
+    /* font-weight: bold; */
+}
+
+/* Menargetkan container row paling bawah dari datatable */
+.dataTables_wrapper .row:last-child {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: b-between !important;
+}
+
+/* Memaksa list pagination (ul) agar menempel ke kanan */
+.dataTables_wrapper .pagination {
+    margin: 0 !important;
+    justify-content: flex-end !important; /* Ini kunci utamanya */
+}
+
+/* Menghilangkan margin default yang mungkin mendorong ke tengah */
+.dataTables_paginate.paging_simple_numbers {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+}
